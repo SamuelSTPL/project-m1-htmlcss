@@ -1,3 +1,608 @@
 @import 'css-reset.css';
 
-/* CSS here :) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins';
+    margin-bottom: 0;
+}
+
+/* Nav Bar section  */
+
+header {
+    background-color: #3a3633;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+
+nav > ul {
+    display: flex;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.navLi {
+    display: inline;
+    margin: 50px 50px;
+    padding-bottom: 13px;
+}
+
+.navLi a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 10px;
+    margin: 30px;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+}
+.logo > img {
+    max-width: 40px;
+}
+
+.hamburgerMenu > img {
+    visibility: hidden;
+}
+
+.navLi > a {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+.navLi > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #FFF;
+    transition: width 1s;
+    margin-top: 10px;
+}
+
+.navLi > a:hover::after {
+    width: 100%;
+}
+
+/* Intro section with background image  */
+
+.background {
+    background-image: url(/imgs/bg.jpg);
+    background-size: contain;
+    height: 1000px;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+}
+
+.intro {
+    border: 10px solid white;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 70%;
+    min-height: 50%;
+    align-items: center;
+}
+
+.left {
+width: 100%;
+text-align: center;
+font-size: 60px;
+}
+
+.right {
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    height: 477px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.rigthTop > h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    
+}
+
+.rightBottom {
+    display: flex;
+    text-align: center;
+    border-top: 1px dashed white;
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 90%;
+    text-align: center;
+}
+.rightBottom > p {
+    margin: 40px 20px;
+    font-size: 20px;
+}
+/* Features section */
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.featuresBoxes {
+    display: block;
+    text-align: center;
+    width: 25%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 25px -5px #9CA59A;
+}
+
+.featuresBoxes > img {
+    height: 40px;
+
+}
+
+.featuresBoxes > h4 {
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+.featuresBoxes > p {
+    color: gray;
+}
+
+.featuresButton {
+    margin-top: 30px;
+    width: 90%;
+    color: white;
+    background-color: #3a3633;
+    height: 40px;
+}
+
+.featuresButton:hover {
+    cursor: pointer;
+}
+
+/* Main section  */
+
+.mainText {
+    background-color: #3a3633;
+    color: white;
+    height: 600px;
+    margin-top: 80px;
+    padding: 90px 300px 90px 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.mainText > h1 {
+    font-size: 70px;
+}
+
+.mainText > p {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+/* hover box  */
+
+.hoverBox {
+    background-color: #3a3633;
+    border: 10px solid white;
+    padding: 50px;
+    width: 375px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    bottom: -100px;
+    left: 50px;
+    box-shadow: 0px 0px 10px -2px black;
+    transition: all 500ms ease;
+}
+
+.hoverBox:hover {
+    border: 10px solid #3a3633;
+    animation: bounce 1s;
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(255,255,255,1) 86%);
+}
+
+.hoverBox:hover > h4 {
+    color: #3a3633;
+}
+
+.hoverBox:hover > p {
+    text-shadow: 2px 2px 8px #0c0b0b;
+}
+
+.hoverBox > h4 {
+    color: red;
+    font-size: 25px;
+}
+.hoverBox > p {
+    color: white;
+    margin-top: 30px;
+}
+
+/* Gradient  */
+
+.gradient {
+    background:rbg(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 11%, rgba(30,144,255,1) 100%);
+    height: 500px;
+    text-align: end;
+    color: white;
+    padding: 50px;
+}
+
+.gradient > h1 {
+    font-size: 70px;
+}
+
+.gradient > p {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+/* Gallery  */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.firstRow,
+.secondRow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.pictures {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 33vw;
+}
+
+.pictures > img {
+    max-width: 100%;
+    align-self: center;
+    object-fit: cover;
+    z-index: 1;
+    transition: 0.5s all ease-in-out;
+    height: 400px;
+    width: 600px
+
+}
+
+.pictures > p {
+    visibility: hidden;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px #0c0b0b;
+}
+
+.pictures:hover > img {
+    transform: scale(1.1);
+}
+
+.pictures:hover p {
+    visibility: visible;
+}
+
+/* Section register  */
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin: 50px auto;
+}
+
+.send {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.send > input {
+    width: 225px;
+    height: 30px;
+    box-shadow: 1px 1px 0px lightgray;
+    border: 1px solid lightgray;
+}
+
+.send > img {
+    background-color: lightgray;
+    height: 30px;
+    box-shadow: 1px 1px 0px lightgray;
+}
+
+.send:hover > img {
+    cursor: pointer;
+}
+
+.label {
+    color: gray;
+}
+
+.checkbox {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Footer  */
+
+.footer {
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+}
+
+.footerBlock {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerBlock > a {
+    margin: 20px auto;
+    text-decoration: none;
+    color: gray;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    }
+    80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    nav {
+        height: 50px;
+        flex-direction: column;
+    }
+    
+    nav > ul {
+        visibility: hidden;
+        margin-top: 20px;
+        align-content: center;
+    }
+    
+    .navLi {
+        display: none;
+        margin: 50px 50px;
+        padding-bottom: 13px;
+    }
+    
+    .navLi a {
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 10px;
+        margin: 30px;
+    }
+    
+    .logo {
+        position: absolute;
+        left: 20px;
+    }
+    .logo > img {
+        max-width: 30px;
+    }
+
+    .hamburgerMenu {
+        visibility: visible;
+        position: absolute;
+        right: 20px;
+    }
+
+    .hamburgerMenu > img {
+        visibility: visible;
+        width: 35px;
+    }
+    .hamburgerMenu:hover > ul {
+        visibility: visible;
+    }
+
+
+    /* Intro  */
+
+    .background {
+        background-size: cover;
+        background-size: 700px 450px;
+        height: 500px;
+        z-index: 1;
+    }
+    
+    .intro {
+        border: 0px solid white;
+        position: relative;
+        display: block;
+        margin: auto;
+        top: 30%;
+        left: 53%;
+        align-items: center;
+    }
+    
+    .left {
+    padding-top: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 33px;
+    font-weight: bold;
+    }
+    
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(0,0,0,0.2);
+        height: 220px;
+        position: relative;
+        width: auto;
+        max-width: 460px;
+        padding: 5px;
+        
+    }
+    
+    
+    .rigthTop > h2 {
+        font-size: 23px;
+        margin-bottom: 7px;
+        font-weight: bold;
+        
+    }
+    
+    .rightBottom {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        border-top: 0px dashed white;
+        margin-top: 0px;
+        width: 400px;
+        padding-top: 0px;
+    }
+    .rightBottom > p {
+        margin-top: 1px;
+        font-size: 16px;
+        font-weight: bold;
+
+    }
+    
+    /* features  */
+
+    .features {
+        display: flex;
+        width: 80%;
+        margin: 30px auto;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .featuresBoxes {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 20px;
+    }
+    
+    
+    .featuresButton {
+        margin: 30px auto;
+        width: 90%;
+        color: white;
+        background-color: #3a3633;
+        height: 40px;
+    }
+
+    /* Main section  */
+
+.mainText {
+    height: 400px;
+    margin-top: 30px;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.mainText > h1 {
+    font-size: 50px;
+}
+
+.mainText > p {
+    font-size: 20px;
+    margin-top: 100px;
+}
+    
+    
+    /* Gradient  */
+    .gradient {
+        height: 400px;
+        padding: 20px;
+    }
+    
+    .gradient > h1 {
+        font-size: 50px;
+        margin-top: 130px;
+
+    }
+    
+    .gradient > p {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+
+/* Gallery  */
+
+.firstRow,
+.secondRow {
+    flex-direction: column;
+}
+
+.pictures {
+    width: 100%;
+}
+
+/* Footer  */
+
+.footer {
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+}
+
+.footerBlock {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerBlock > a {
+    margin: 10px auto;
+    
+}
+}
+
